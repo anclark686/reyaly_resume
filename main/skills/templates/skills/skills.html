@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills</title>
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
+</head>
+<body>
+{% include 'components/navbar.html' %}
+<h1>Skills</h1>
+<br />
+    {% include './skills_accordion.html' %}
+
+</body>
+</html>

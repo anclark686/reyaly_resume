@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work History and Education</title>
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
+</head>
+<body>
+{% include 'components/navbar.html' %}
+<h1>Work History and Education</h1>
+<br />
+
+<h2>Experience</h2>
+        {% for job in experience %}
+                {% include './experience_card.html' %}
+<!--                <h3>{{ job.company }} - {{ job.title }}</h3>-->
+<!--                <p> {{ job.date }} </p>-->
+<!--                <p> {{ job.details }} </p>-->
+        {% endfor %}
+
+    <h2>Education</h2>
+    <ul>
+        {% for school in education %}
+            <li>
+                <strong>{{ school.school }}</strong>
+                <p>{{ school.level }} - {{ school.date }} </p>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
