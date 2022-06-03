@@ -3,12 +3,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Skills</title>
+    <title>Alycia Clark | Skills</title>
     <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
 </head>
-<body>
+<body class="bg-dark">
 {% include 'components/navbar.html' %}
-<h1>Skills</h1>
+<h1 class="text-center p-5 text-light">Skills</h1>
+
+    <div class="d-flex justify-content-center bg-info">
+        <h3 class="p-4 text-dark"> </h3>
+     </div>
+    <br />
+
 <br />
     {% include './skills_accordion.html' %}
 

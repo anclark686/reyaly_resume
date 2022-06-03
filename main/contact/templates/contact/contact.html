@@ -3,16 +3,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title>Alycia Clark | Contact</title>
     <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
 </head>
-<body>
+<body class="bg-dark">
 {% include 'components/navbar.html' %}
-<h1 class="header">Contact Me</h1>
-      <a href="https://www.linkedin.com/in/anclark686/" target="_blank" rel="noreferrer">LinkedIn</a>
+<h1 class="header text-center p-5 text-light">Contact Me</h1>
+
+    <div class="d-flex justify-content-center bg-info">
+        <h3 class="p-4 text-dark"> </h3>
+     </div>
+    <br />
+<h3 class="text-center p-2 text-info">LinkedIn</h3>
+      <h5 class="text-center">
+          <a href="https://www.linkedin.com/in/anclark686/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </h5>
       <br />
-<h4>Portfolio</h4>
-  <a href="http://localhost:3000/">Alycia Nicole</a>
+
+<h3 class="text-center p-2 text-info">Portfolio</h3>
+    <h5 class="text-center">
+      <a href="https://reyaly-portfolio.herokuapp.com/">Alycia Nicole</a>
+    </h5>
+
+<br />
+<br />
+<h3 class="text-center p-2 text-info">Send Me a Message</h3>
 <div class="card d-grid gap-2 col-6 mx-auto">
   <div class="card-body">
     <div class="mb-3 d-grid gap-2 col-12 mx-auto">
@@ -29,6 +44,7 @@
     </div>
   </div>
 </div>
-
+<br />
+<br />
 </body>
 </html>
