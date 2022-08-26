@@ -5,5 +5,5 @@ from .models import Experience, Education
 def experience(request):
     return render(request,
                   "experience/experience.html",
-                  {"experience": Experience.objects.all(),
+                  {"experience": Experience.objects.all().order_by('-id'),
                    "education": Education.objects.all()})

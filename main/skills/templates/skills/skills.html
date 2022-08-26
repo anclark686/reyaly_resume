@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <title>Alycia Clark | Skills</title>
     <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'AC_ICON.ico' %}"/>
 </head>
 <body class="bg-dark">
 {% include 'components/navbar.html' %}
-<h1 class="text-center p-5 text-light">Skills</h1>
+<h1 class="text-center p-5 text-light">Skills and Certifications</h1>
 
     <div class="d-flex justify-content-center bg-info">
         <h3 class="p-4 text-dark"> </h3>
      </div>
     <br />
 
-<br />
+<h2 class="text-center p-5 text-info">Skills</h2>
     {% include './skills_accordion.html' %}
-
+<h2 class="text-center p-5 text-info">Certifications</h2>
 </body>
 </html>

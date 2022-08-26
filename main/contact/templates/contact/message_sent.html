@@ -1,10 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Alycia Clark | Contact</title>
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'AC_ICON.ico' %}"/>
 </head>
-<body>
-$END$
+<body class="bg-dark">
+{% include 'components/navbar.html' %}
+<h1 class="header text-center p-5 text-light">Thank you!</h1>
+
+    <div class="d-flex justify-content-center bg-info">
+        <h3 class="p-4 text-dark"> </h3>
+     </div>
+    <br />
+<h3 class="text-center p-2 text-info">Your message has been sent, and I will reply shortly!</h3>
+
 </body>
 </html>

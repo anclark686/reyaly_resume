@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import  home
+from home.views import  home, open_file
 from contact.views import  contact
 from experience.views import  experience
 from skills.views import  skills
@@ -25,5 +25,8 @@ urlpatterns = [
     path('', home, name='home'),
     path('experience', experience, name='experience'),
     path('contact', contact, name='contact'),
-    path('skills', skills, name='skills')
+    path('skills', skills, name='skills'),
+    # path('download/', filedownload, name='download'),
+    # path('download_my_pdf', views.download_pdf),
+    path('open/<str:path>/', open_file, name='open-file'),
 ]

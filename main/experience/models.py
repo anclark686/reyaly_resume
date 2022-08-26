@@ -6,6 +6,7 @@ class Experience(models.Model):
     title = models.CharField(max_length=200)
     date = models.CharField(max_length=100)
     details = models.CharField(max_length=500)
+    
 
     def __str__(self):
         return f'{self.title} at {self.company} from {self.date}.'
