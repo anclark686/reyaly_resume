@@ -35,7 +35,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'reyaly-resume.herokuapp.com',
-    '.vercel.app', 
     '.now.sh',
     '127.0.0.1'
 ]
