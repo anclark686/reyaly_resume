@@ -16,7 +16,8 @@ mycursor = mydb.cursor()
 edsql = "INSERT INTO experience_education VALUES (%s, %s, %s, %s)"
 edval = [
     (1,'Old Dominion University','2014-05-10','Bachelor of Science degree in Criminal Justice'),
-    (2,'Penn State University','2015-12-31','Graduate Level Coursework in Statistics')
+    (2,'Penn State University','2015-12-31','Graduate Level Coursework in Statistics'),
+    (3,'Ada Developers Academy','2023','Software Development Bootcamp'),
 ]
 
 mycursor.executemany(edsql, edval)
@@ -49,9 +50,19 @@ skval = [
     (12,'HTML/CSS','programming'),
     (13,'Records Management','technical'),
     (14,'Java','programming'),
+    (15,'Ruby: Rails','programming'),
+    (16,'PHP: Laravel','programming')
 ]
 
 mycursor.execute(sksql, skval)
+
+# update1 = "UPDATE skills_skills SET skill = %s WHERE id = 8"
+# update1_val = "Python: Flask, Django"
+# mycursor.execute(update1, update1_val)
+
+# update2 = "UPDATE skills_skills SET skill = %s WHERE id = 11"
+# update2_val = "JavaScript: React, Vue, Angular"
+# mycursor.execute(update2, update2_val)
 
 mydb.commit()
 
