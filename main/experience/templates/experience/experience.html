@@ -1,38 +1,64 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Alycia Clark | Experience</title>
-    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
-    <link rel="shortcut icon" type="image/png" href="{% static 'AC_ICON.ico' %}"/>
-</head>
-<body class="bg-dark">
-{% include 'components/navbar.html' %}
-<h1 class="text-center p-5 text-light">Work History and Education</h1>
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'mysite/css/style.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'AC_ICON.ico' %}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-dark">
+    {% include 'components/navbar.html' %}
 
+    <div class="title-header">
+      <h1 class="text-center p-5 text-light">Work History and Education</h1>
+    </div>
     <div class="d-flex justify-content-center bg-info">
-        <h3 class="p-4 text-dark"> </h3>
-     </div>
+      <div class="p-4"></div>
+    </div>
+
     <br />
 
-<h2 class="text-center p-5 text-info">Experience</h2>
-        {% for job in experience %}
-                {% include './experience_card.html' %}
-        {% endfor %}
+    <div>
+      <div class="image-container">
+        <img src="{% static 'work.jpg' %}" class="page-image" />
+      </div>
+    </div>
+
+    <h2 class="text-center p-5 text-info">Experience</h2>
+    {% for job in experience %} 
+      {% include './experience_card.html' %} 
+    {% endfor%}
 
     <h2 class="text-center p-5 text-info">Education</h2>
     <div class="container d-flex justify-content-center">
-        <ul class=" d-flex justify-content-center">
-            {% for school in education %}
-                <div class=" text-center   p-3 text-light">
-                    <h4><strong>{{ school.school }}</strong></h4>
-                    <h5>{{ school.level }}</h5>
-                    <p>{{ school.date }} </p>
-                </div>
-            {% endfor %}
-        </ul>
+      <ul class="d-flex justify-content-center">
+        {% for school in education %}
+        <div class="text-center px-3 text-light">
+          <h4><strong>{{ school.school }}</strong></h4>
+          <h5>{{ school.level }}</h5>
+          <p>{{ school.date }}</p>
+        </div>
+        {% endfor %}
+      </ul>
     </div>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

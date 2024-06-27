@@ -1,23 +1,66 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Alycia Clark | Skills</title>
-    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
-    <link rel="shortcut icon" type="image/png" href="{% static 'AC_ICON.ico' %}"/>
-</head>
-<body class="bg-dark">
-{% include 'components/navbar.html' %}
-<h1 class="text-center p-5 text-light">Skills and Certifications</h1>
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'mysite/css/style.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'AC_ICON.ico' %}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Sacramento&display=block"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-dark">
+    {% include 'components/navbar.html' %}
 
+    <div class="title-header">
+      <h1 class="text-center p-5 text-light">Skills and Certifications</h1>
+    </div>
     <div class="d-flex justify-content-center bg-info">
-        <h3 class="p-4 text-dark"> </h3>
-     </div>
+      <div class="p-4"></div>
+    </div>
+
     <br />
 
-<h2 class="text-center p-5 text-info">Skills</h2>
+    <div>
+      <div class="image-container">
+        <img src="{% static 'skills.jpg' %}" class="page-image" />
+      </div>
+    </div>
+
+    <h2 class="text-center p-5 text-info">Skills</h2>
     {% include './skills_accordion.html' %}
-<h2 class="text-center p-5 text-info">Certifications</h2>
-</body>
+
+    <br />
+
+    <h2 class="text-center p-3 text-info">Certifications</h2>
+    <div class="container d-flex justify-content-center">
+      <ul class="d-flex justify-content-center">
+        {% for cert in certifications %}
+        <div class="text-center px-3 text-light">
+          <h4><strong>{{ cert.program }}</strong></h4>
+          <h5>{{ cert.title }}</h5>
+          <p>{{ cert.date }}</p>
+          <p><a href="{{ cert.link }}" target="_blank" class="text-info">View</a></p>
+        </div>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
